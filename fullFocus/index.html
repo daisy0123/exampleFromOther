@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery图文分离响应式全屏动画滑点图 - 【科e互联】</title>
+<link rel="stylesheet" type="text/css" href="css/slide.css"/>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slide.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".slideInner").slide({
+            slideContainer: $('.slideInner a'),
+            effect: 'easeOutCirc',
+            autoRunTime: 5000,
+            slideSpeed: 1000,
+            nav: true,
+            autoRun: true,
+            prevBtn: $('a.prev'),
+            nextBtn: $('a.next')
+        });
+    });
+</script>
+</head>
+<body class="keBody">
+<h1 class="keTitle">jQuery图文分离响应式全屏动画滑点图</h1>
+<div class="kePublic">
+<!--效果html开始-->
+<div class="slides">
+  <div class="slideInner">
+    <a href="http://www.internetke.com/" style="background: url(img/slide1.jpg) no-repeat;">
+    <div class="moveElem img1" rel="0,easeInOutExpo"> <img src="img/slide1p1.png" /> </div>
+    <div class="moveElem img2" rel="150,easeInOutExpo"> <img src="img/slide1p2.png" /> </div>
+    </a>
+    <a href="http://www.internetke.com/" style="background: url(img/slide2.jpg) no-repeat">
+    <div class="moveElem img1" rel="0,easeInOutExpo"> <img src="img/slide2p1.png" /> </div>
+    </a>
+    <a href="http://www.internetke.com/" class="slide3" style="background: url(img/slide3.jpg) no-repeat;">
+    <div class="moveElem img1" rel="0,easeInOutExpo"> <img src="img/slide3p1.png" /> </div>
+    <div class="moveElem img2" rel="150,easeInOutExpo"> <img src="img/slide3p2.png" /> </div>
+    <div class="moveElem img3" rel="300,easeInOutExpo"> <img src="img/slide3p3.png" /> </div>
+    </a>
+    <a href="http://www.internetke.com/" style="background: rgb(113, 209, 231);">
+    <div class="moveElem img1" rel="0,easeInOutExpo"> <img src="img/slide1p1.png" /> </div>
+    <div class="moveElem img2" rel="150,easeInOutExpo"> <img src="img/slide1p2.png" /> </div>
+    </a>
+    <a href="http://www.internetke.com/" style="background: rgb(178, 44, 44);">
+    <div class="moveElem img1" rel="0,easeInOutExpo"> <img src="img/slide1p1.png" /> </div>
+    <div class="moveElem img2" rel="150,easeInOutExpo"> <img src="img/slide1p2.png" /> </div>
+    </a>
+   </div>
+  <div class="nav"> <a class="prev" href="javascript:;"></a> <a class="next" href="javascript:;"></a></div>
+</div>
+<!--效果html结束-->
+<div class="clear"></div>
+</div>
+<div class="keBottom">
+<p class="keTxtP">科e互联网页特效集锦---更多特效请访问 <a class="keUrl" href="http://www.internetke.com" target="_blank">www.internetke.com</a></p>
+<p class="keTxtP">本站导航：
+<a href="http://www.internetke.com/" target="_blank" class="cor_bs">网站建设</a> | 
+<a href="http://www.internetke.com/material/" target="_blank" class="cor_bs">网页素材</a> | 
+<a href="http://www.internetke.com/effects/" target="_blank" class="cor_bs">网页特效</a> | 
+<a href="http://www.internetke.com/share/" target="_blank" class="cor_bs">设计分享</a> | 
+<a href="http://www.internetke.com/tutorial/" target="_blank" class="cor_bs">建站教程</a> | 
+<a href="http://www.internetke.com/model/" target="_blank" class="cor_bs">网站模版</a> | 
+<a href="http://www.internetke.com/appreciate/" target="_blank" class="cor_bs">酷站赏析</a>
+</p>
+<p class="keTxtP">＊尊重他人劳动成果，转载请自觉注明出处！注：此代码为【科e整理/原创特效】仅供学习交流，请勿用于商业用途。
+<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=a7df3558c291e0407375b9ad649d96a6e507286ffeb0650c65a221d1500a0779" class="button red" title="北京网站建设,网页特效QQ交流群-科e互联">加入QQ交流群</a></p>
+</div>
+</body>
+</html>

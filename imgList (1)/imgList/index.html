@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery学员列表左右滑动切换特效 - 【科e互联】</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body class="keBody">
+<h1 class="keTitle">jQuery学员列表左右滑动切换特效</h1>
+<div class="kePublic">
+<!--效果html开始-->
+<div class="bodyCon08">
+  <div class="students">
+    <div id="four_flash">
+      <div class="flashBg">
+        <ul class="mobile">
+          <li> <img src="images/senke_xy00.jpg" />
+            <dd>高同学</dd>
+            <p>2013年CPA暑期班学员，一年通过5门课程</p>
+            <a href="http://www.internetke.com"></a> </li>
+          <li> <img src="images/senke_xy01.jpg" />
+            <dd>李同学</dd>
+            <p>2014年CPA周末旗舰班学员；1年通过4门课程</p>
+            <a href="http://www.internetke.com"></a> </li>
+          <li> <img src="images/senke_xy02.jpg" />
+            <dd>丁同学</dd>
+            <p>现就职某会计师师事务所<br/>
+              2012年CPA学员，3年通过6门课程</p>
+            <a href="http://www.internetke.com"></a> </li>
+          <li> <img src="images/senke_xy03.jpg" />
+            <dd>宋同学</dd>
+            <p>2013年会计证、CPA长线周末班学员，2014年通过4门课程；</p>
+            <a href="http://www.internetke.com"></a> </li>
+          <li> <img src="images/senke_xy04.jpg" />
+            <dd>战同学</dd>
+            <p>2012年北京会计初级金榜，2014年会计中级高分一次通过</p>
+            <a href="http://www.internetke.com"></a> </li>
+          <li> <img src="images/senke_xy05.jpg" />
+            <dd>于同学</dd>
+            <p>2014年会计中级学员，1次性通过中级全科</p>
+            <a href="http://www.internetke.com"></a> </li>
+        </ul>
+      </div>
+      <div class="but_left"><img src="images/qianxleft.png" /></div>
+      <div class="but_right"><img src="images/qianxr.png" /></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript">
+//学员
+var _index5=0;
+$("#four_flash .but_right img").click(function(){
+	_index5++;
+	var len=$(".flashBg ul.mobile li").length;
+	if(_index5+5>len){
+		$("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
+	}
+	$("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*326},1000);
+	});
+
+	
+$("#four_flash .but_left img").click(function(){
+	if(_index5==0){
+		$("ul.mobile").prepend($("ul.mobile").html());
+		$("ul.mobile").css("left","-1380px");
+		_index5=6
+	}
+	_index5--;
+	$("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*326},1000);
+	});
+</script>
+<!--效果html结束-->
+<div class="clear"></div>
+</div>
+<div class="keBottom">
+<p class="keTxtP">科e互联网页特效集锦---更多特效请访问 <a class="keUrl" href="http://www.internetke.com" target="_blank">www.internetke.com</a></p>
+<p class="keTxtP">本站导航：
+<a href="http://www.internetke.com/" target="_blank" class="cor_bs">网站建设</a> | 
+<a href="http://www.internetke.com/material/" target="_blank" class="cor_bs">网页素材</a> | 
+<a href="http://www.internetke.com/effects/" target="_blank" class="cor_bs">网页特效</a> | 
+<a href="http://www.internetke.com/share/" target="_blank" class="cor_bs">设计分享</a> | 
+<a href="http://www.internetke.com/tutorial/" target="_blank" class="cor_bs">建站教程</a> | 
+<a href="http://www.internetke.com/model/" target="_blank" class="cor_bs">网站模版</a> | 
+<a href="http://www.internetke.com/appreciate/" target="_blank" class="cor_bs">酷站赏析</a>
+</p>
+<p class="keTxtP">＊尊重他人劳动成果，转载请自觉注明出处！注：此代码为【科e整理/原创特效】仅供学习交流，请勿用于商业用途。
+<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=a7df3558c291e0407375b9ad649d96a6e507286ffeb0650c65a221d1500a0779" class="button red" title="北京网站建设,网页特效QQ交流群-科e互联">加入QQ交流群</a></p>
+</div>
+</body>
+</html>

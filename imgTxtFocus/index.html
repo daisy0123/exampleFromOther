@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>百度应用网站jQuery左右按钮焦点图 - 【科e互联】</title>
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+</head>
+<body class="keBody">
+<h1 class="keTitle">百度应用网站jQuery左右按钮焦点图</h1>
+<div class="kePublic">
+<!--效果html开始-->
+<div class="lunbo-recommend cls">
+	<div class="slide-pics" id="banner-slide">
+		<div class="scrollable">
+			<ul class="items cls">
+				<li class="item">
+				<a href="http://www.internetke.com/">
+				<img src="images/1.jpg" alt="" /></a>
+				<div class="info-wrapper">
+					<div class="info-background">
+					</div>
+					<div class="pic-info">
+						<h3>QQ空间</h3>
+						<p><span class="orange">小编推荐：</span>致力于帮助用户随时随地“分享生活，留住感动</p>
+						<a class="visite s-index-icon org-btn-blk" href="http://www.internetke.com/">
+						访 问</a> </div>
+				</div>
+				</li>
+				<li class="item">
+				<a href="http://www.internetke.com/">
+				<img src="images/2.jpg" alt="" /></a>
+				<div class="info-wrapper">
+					<div class="info-background">
+					</div>
+					<div class="pic-info">
+						<h3>中国越野拉力赛</h3>
+						<p><span class="orange">小编推荐：</span>全面详解第一届中国越野拉力赛</p>
+						<a class="visite s-index-icon org-btn-blk" href="http://www.internetke.com/">
+						访 问</a> </div>
+				</div>
+				</li>
+				<li class="item">
+				<a href="http://www.internetke.com/">
+				<img src="images/3.jpg" alt="" /></a>
+				<div class="info-wrapper">
+					<div class="info-background">
+					</div>
+					<div class="pic-info">
+						<h3>我叫MT</h3>
+						<p><span class="orange">小编推荐：</span>2013最火卡牌手游，纯正的魔兽题材</p>
+						<a class="visite s-index-icon org-btn-blk" href="http://www.internetke.com/">
+						访 问</a> </div>
+				</div>
+				</li>
+				<li class="item">
+				<a href="http://www.internetke.com/">
+				<img src="images/4.jpg" alt="" /></a>
+				<div class="info-wrapper">
+					<div class="info-background">
+					</div>
+					<div class="pic-info">
+						<h3>高端指南：有品位也要有内涵</h3>
+						<p><span class="orange">小编推荐：</span>笑一个吧，内涵世界里多欢乐！</p>
+						<a class="visite s-index-icon org-btn-blk" href="http://www.internetke.com/">
+						访 问</a> </div>
+				</div>
+				</li>
+				<li class="item">
+				<a href="http://www.internetke.com/">
+				<img src="images/5.jpg" alt="" /></a>
+				<div class="info-wrapper">
+					<div class="info-background">
+					</div>
+					<div class="pic-info">
+						<h3>发现最美应用</h3>
+						<p><span class="orange">小编推荐：</span>体验与品位并存</p>
+						<a class="visite s-index-icon org-btn-blk" href="http://www.internetke.com/">
+						访 问</a> </div>
+				</div>
+				</li>
+			</ul>
+		</div>
+		<div class="cover coverleft">
+		</div>
+		<div class="cover coverright">
+		</div>
+		<div class="prev prev-next s-index-icon">
+			上一张</div>
+		<div class="next prev-next s-index-icon">
+			下一张</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#word').focus();
+    });
+</script>
+<script type="text/javascript">$(document).ready(function() {
+   (function($){
+        $.fn.slider=function(arg){
+            var me = $(this),opt = $.extend({inteval:5000,auto:true,loop:false,prev:me.find(".prev"),next:me.find(".next"),pageBtns:"",finish:function(){},start:function(){}}, arg),pageBtns,scrollable = me.find(".scrollable"),ori_items = me.find(".items"),total_num = me.find(".item").length,cur_page = 0,mov_w = me.find(".item").outerWidth(),move_left=0,interval;
+            opt.start();
+            if (opt.loop) {
+                ori_items.append(ori_items.find(".item").clone());
+                ori_items.prepend(ori_items.find(".item").clone());
+                scrollable.scrollLeft(getCurScroLeft());
+            }
+           opt.prev.length&&opt.prev.bind("click",move).hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")});
+           opt.next.length&&opt.next.bind("click",move).hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")});
+           if(opt.auto){
+               interval=setInterval(move,opt.inteval);
+               me.hover(function(){clearInterval(interval)},function(){interval=setInterval(move,opt.inteval);move_left=0});
+           }
+           if(opt.pageBtns&&!opt.loop){
+               pageBtns=opt.pageBtns;
+               pageBtns.bind("click",moveTo);
+           }
+           function moveTo(e){
+                pageBtns.unbind("click",moveTo);
+                var cur_li=$(e.target).closest("li"),num=cur_li.index();
+                pageBtns.removeClass("select");cur_li.addClass("select");
+                var cur_scrollLeft=num*mov_w;
+                scrollable.animate({scrollLeft:cur_scrollLeft},{duration:'normal',easing:'swing',complete:function(){pageBtns.bind("click",moveTo);opt.finish(num)},queue:false});
+           }
+           function move(e){
+              opt.prev.length&&opt.prev.unbind("click",move);
+              opt.next.length&&opt.next.unbind("click",move);
+              if(e){
+                  clearInterval(interval);
+                  var cur_btn=$(e.target);
+                  if(cur_btn.hasClass("prev")){move_left=1};
+                  if(cur_btn.hasClass("next")){move_left=0};
+              }
+               var cur_scrollLeft=move_left ? getCurScroLeft()-mov_w:getCurScroLeft()+mov_w;
+               scrollable.stop().animate({scrollLeft:cur_scrollLeft},{duration:'normal',easing:'swing',complete:complate,queue:false});
+           }
+           function complate(){
+               cur_page=move_left?cur_page-1:cur_page+1;
+               if(cur_page<= -total_num+2){cur_page+=total_num;resetscroll()}
+               if(cur_page>=2*total_num-2){cur_page-=total_num;resetscroll()}
+               opt.prev.length&&opt.prev.bind("click",move);
+               opt.next.length&&opt.next.bind("click",move);
+               opt.finish();
+           }
+           function resetscroll(){
+               scrollable.scrollLeft(getCurScroLeft());
+           }
+           function getCurScroLeft(){
+               return opt.loop?total_num * mov_w+cur_page*mov_w:cur_page*mov_w;
+           }
+        }
+    })(jQuery);
+    $("#banner-slide").slider({
+        interval:5000,
+        loop:true,
+        auto:true
+    });
+     $("#ex-app-wrapper").slider({
+        interval:5000,
+        loop:false,
+        auto:false,
+        pageBtns:$("#op-page-list li")
+    });
+    $("#banner-slide .item").hover(function(){$(this).find(".info-wrapper").animate({'top':190},{duration:300,queue:false})},function(){$(this).find(".info-wrapper").animate({'top':266},{duration:300,queue:false})});
+
+});
+</script>
+<!--效果html结束-->
+<div class="clear"></div>
+</div>
+<div class="keBottom">
+<p class="keTxtP">科e互联网页特效集锦---更多特效请访问 <a class="keUrl" href="http://www.internetke.com" target="_blank">www.internetke.com</a></p>
+<p class="keTxtP">本站导航：
+<a href="http://www.internetke.com/" target="_blank" class="cor_bs">网站建设</a> | 
+<a href="http://www.internetke.com/material/" target="_blank" class="cor_bs">网页素材</a> | 
+<a href="http://www.internetke.com/effects/" target="_blank" class="cor_bs">网页特效</a> | 
+<a href="http://www.internetke.com/share/" target="_blank" class="cor_bs">设计分享</a> | 
+<a href="http://www.internetke.com/tutorial/" target="_blank" class="cor_bs">建站教程</a> | 
+<a href="http://www.internetke.com/model/" target="_blank" class="cor_bs">网站模版</a> | 
+<a href="http://www.internetke.com/appreciate/" target="_blank" class="cor_bs">酷站赏析</a>
+</p>
+<p class="keTxtP">＊尊重他人劳动成果，转载请自觉注明出处！注：此代码为【科e整理/原创特效】仅供学习交流，请勿用于商业用途。
+<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=a7df3558c291e0407375b9ad649d96a6e507286ffeb0650c65a221d1500a0779" class="button red" title="北京网站建设,网页特效QQ交流群-科e互联">加入QQ交流群</a></p>
+</div>
+</body>
+</html>

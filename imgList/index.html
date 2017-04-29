@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>两组CSS3动画切换图片特效代码 - 【科e互联】</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Le styles -->
+<link href="demo/assets/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="demo/assets/css/style.css" />
+<link rel="stylesheet" href="css/lush.animations.css" />
+<link rel="stylesheet" href="css/lush.min.css" />
+<link href="demo/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<style>
+#carousel-1 img { border: 1px solid rgba(0, 0, 0, 0.2); }
+</style>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body class="keBody">
+<h1 class="keTitle">两组CSS3动画切换图片特效代码</h1>
+<div class="kePublic">
+<!--效果html开始-->
+<div class="container">
+  <div class="masthead">
+    <h2 class="muted"></h2>
+  </div>
+  <ul class="lush-slider flat no-shadow" style="max-width: 700px" id="carousel-1"
+    data-base-width="1100" data-base-height="220">
+    <li 
+            data-slide-in="at 0  from back use easeOutExpo during 1000" 
+            data-slide-out="at 100 to bottom use easeInExpo during 500"> <img src="carousel/carousel1.jpg" class="img-polaroid" style="top: 38px; left: 224px; " /> <img src="carousel/carousel2.jpg" class="img-polaroid" style="top: 38px; left: 448px; " /> <img src="carousel/carousel3.jpg" class="img-polaroid" style="top: 38px; left: 672px; " /> </li>
+    <li 
+            data-slide-in="at 0  from back use easeOutExpo during 1000" 
+            data-slide-out="at 100 to bottom use easeInExpo during 500"> <img src="carousel/carousel4.jpg" class="img-polaroid" style="top: 38px; left: 224px; " /> <img src="carousel/carousel2.jpg" class="img-polaroid" style="top: 38px; left: 448px; " /> <img src="carousel/carousel5.jpg" class="img-polaroid" style="top: 38px; left: 672px; " /> </li>
+  </ul>
+  <hr>
+  <ul class="lush-slider flat dark no-shadow" style="max-width: 700px" id="carousel-2"
+    data-base-width="1100" data-base-height="220">
+    <li 
+            data-slide-in="plus 100 from right use easeOutExpo during 1000" 
+            data-slide-out="plus 100 to left use easeInExpo during 500"> <img src="carousel/carousel1.jpg" class="img-polaroid" style="top: 38px; left: 224px; " /> <img src="carousel/carousel2.jpg" class="img-polaroid" style="top: 38px; left: 448px; " /> <img src="carousel/carousel3.jpg" class="img-polaroid" style="top: 38px; left: 672px; " /> </li>
+    <li 
+            data-slide-in="plus 100 from right use easeOutExpo during 1000" 
+            data-slide-out="plus 100 to left use easeInExpo during 500"> <img src="carousel/carousel4.jpg" class="img-polaroid" style="top: 38px; left: 224px; " /> <img src="carousel/carousel2.jpg" class="img-polaroid" style="top: 38px; left: 448px; " /> <img src="carousel/carousel5.jpg" class="img-polaroid" style="top: 38px; left: 672px; " /> </li>
+  </ul>
+  <div id="feat"></div>
+</div>
+<!-- /container --> 
+
+<!-- Le javascript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="demo/assets/js/jquery.js"></script> 
+<script src="demo/assets/js/bootstrap.min.js"></script> 
+<script src="js/jquery.easing.1.3.min.js"></script> 
+<script src="js/jquery.lush.js"></script> 
+<script>
+        $(function(){
+
+        $('#feat').load('features.html')
+
+            $('#carousel-1, #carousel-2').lush({
+                    manual: true,
+                    slider: {
+                        pauseOnHover: true,
+                keyboard: false,
+                        pager: false,
+                carousel: true
+                    }
+                })
+                
+            })
+
+</script>
+<!--效果html结束-->
+<div class="clear"></div>
+</div>
+<div class="keBottom">
+<p class="keTxtP">科e互联网页特效集锦---更多特效请访问 <a class="keUrl" href="http://www.internetke.com" target="_blank">www.internetke.com</a></p>
+<p class="keTxtP">本站导航：
+<a href="http://www.internetke.com/" target="_blank" class="cor_bs">网站建设</a> | 
+<a href="http://www.internetke.com/material/" target="_blank" class="cor_bs">网页素材</a> | 
+<a href="http://www.internetke.com/effects/" target="_blank" class="cor_bs">网页特效</a> | 
+<a href="http://www.internetke.com/share/" target="_blank" class="cor_bs">设计分享</a> | 
+<a href="http://www.internetke.com/tutorial/" target="_blank" class="cor_bs">建站教程</a> | 
+<a href="http://www.internetke.com/model/" target="_blank" class="cor_bs">网站模版</a> | 
+<a href="http://www.internetke.com/appreciate/" target="_blank" class="cor_bs">酷站赏析</a>
+</p>
+<p class="keTxtP">＊尊重他人劳动成果，转载请自觉注明出处！注：此代码为【科e整理/原创特效】仅供学习交流，请勿用于商业用途。
+<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=a7df3558c291e0407375b9ad649d96a6e507286ffeb0650c65a221d1500a0779" class="button red" title="北京网站建设,网页特效QQ交流群-科e互联">加入QQ交流群</a></p>
+</div>
+</body>
+</html>

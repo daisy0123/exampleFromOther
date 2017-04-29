@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>发言显示</title>
+<style type="text/css">
+#msg
+{
+background-color:#EBEBEB;
+}
+</style>
+<script language="javascript" src="/js/Ajax.js"></script>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" bgcolor="#ECFDFF">
+<div id="msg" style="overflow-x:hidden;overflow-y:auto;height:380px;word-break:break-all;width:890px;" ></div>
+<script language="javascript">
+GetMsg();
+var timerID = null;											//定义时间控制变量
+var timerRunning = false;
+function GetMsg()
+{
+	var Url = "GetMsg.php";										//定义请求文件
+	var Msg = document.getElementById("msg");
+	var Ajax = InitAjax();										//初始化Ajax对象
+	Ajax.open("GET", Url, true); 
+	Ajax.onreadystatechange = function() { 
+		if (Ajax.readyState == 4 && Ajax.status == 200) {		//判断获取状态
+			Msg.innerHTML += Ajax.responseText;
+			document.getElementById('msg').scrollTop = document.getElementById('msg').scrollHeight;
+		}
+	}
+	Ajax.send(null); 
+	timerID = setTimeout("GetMsg()",1000);						//设置执行时间
+	timerRunning = true;
+}
+var timerID = null;
+var timerRunning = false;
+function stopmsg (){											//停止执行
+if(timerRunning)
+clearTimeout(timerID);
+timerRunning = false;
+}
+function startmsg (){											//开始执行
+stopmsg();
+GetMsg();
+}
+</script>
+</body>
+</html>

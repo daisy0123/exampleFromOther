@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JS鼠标滑过展示大图详细信息网页特效</title>
+<link rel="stylesheet" href="_common/css/main.css" type="text/css" media="all">
+<link href="css/imageMenu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="_common/js/mootools.js"></script>
+<script type="text/javascript" src="js/imageMenu.js"></script>
+</head>
+<body class="keBody">
+<!--效果html开始-->
+<div id="container">
+  <div id="example">
+    <div id="imageMenu">
+      <ul>
+        <li class="landscapes"><a href="http://www.internetke.com/" target="_blank">Landscapes</a></li>
+        <li class="people"><a href="http://www.internetke.com/" target="_blank">People</a></li>
+        <li class="nature"><a href="http://www.internetke.com/" target="_blank">Nature</a></li>
+        <li class="urban"><a href="http://www.internetke.com/" target="_blank">Urban</a></li>
+        <li class="abstract"><a href="http://www.internetke.com/" target="_blank">Abstract</a></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+			window.addEvent('domready', function(){
+				var myMenu = new ImageMenu($$('#imageMenu a'),{openWidth:310, border:2, onOpen:function(e,i){window.open(e);}});
+			});
+		</script> 
+  </div>
+</div>
+<!--效果html结束-->
+</body>
+</html>

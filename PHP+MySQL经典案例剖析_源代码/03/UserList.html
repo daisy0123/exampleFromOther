@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>用户列表</title>
+<style type="text/css">
+ul{
+list-style:none;
+margin:0px;
+padding-left:5px;
+padding-top:8px;
+}
+ul li{
+height:20px;
+font-size:12px;
+}
+</style>
+<script language="javascript" src="/js/Ajax.js"></script>
+<script language="javascript" src="/js/Base.js"></script>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" bgcolor="#ECFDFF">
+<div id="user" style="overflow-x:hidden;overflow-y:auto; height:440px;" >
+</div>
+<script language="javascript">
+GetUserList();
+var timerID = null;											//定义时间控制变量
+var timerRunning = false;
+function GetUserList()										//用户列表显示函数
+{
+	var Url = "UserList.php";									//定义请求文件
+	var Msg = document.getElementById("user"); 
+	var Ajax = InitAjax();										//初始化Ajax对象
+	Ajax.open("GET", Url, true);
+	Ajax.onreadystatechange = function() { 
+		if (Ajax.readyState == 4 && Ajax.status == 200) {			//判断获取状态，成功则显示列表
+			if(Ajax.responseText == '0')						//判断返回为0则转到登陆页面
+			{
+				alert('嘿嘿，你被管理员踢出了聊天室！');
+				top.location.href = 'Login.php';
+			}else{
+				Msg.innerHTML = Ajax.responseText;
+			}
+		}
+	}
+	Ajax.send(null); 
+	timerID = setTimeout("GetUserList()",1000);					//设置刷新时间
+	timerRunning = true;
+}
+var timerID = null;
+var timerRunning = false;
+function stopuser (){											//停止显示
+if(timerRunning)
+clearTimeout(timerID);
+timerRunning = false;
+}
+function startuser (){											//显示列表
+stopuser ();
+GetUserList();
+}
+</script>
+</body>
+</html>

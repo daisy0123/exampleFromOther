@@ -1,0 +1,135 @@
+@charset "utf-8";
+/*科e互联特效基本框架CSS*/
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal}
+body>div{margin:0 auto}
+div {text-align:left}
+a img {border:0}
+body { color: #333; text-align: center; font: 12px "宋体"; }
+ul, ol, li {list-style-type:none;vertical-align:0}
+a {outline-style:none;color:#535353;text-decoration:none}
+a:hover { color: #D40000; text-decoration: none}
+.clear{height:0; overflow:hidden; clear:both}
+.button {display: inline-block;zoom: 1; *display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;text-decoration: none;font: 14px/100% Arial, Helvetica, sans-serif;padding:0.25em 0.6em 0.3em;text-shadow: 0 1px 1px rgba(0,0,0,.3);-webkit-border-radius: .5em; -moz-border-radius: .5em;border-radius: .5em;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.red {color: #faddde;border: solid 1px #980c10;background: #d81b21;background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#A51715));background: -moz-linear-gradient(top,  #ed1c24,  #A51715);filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+}
+.red:hover { background: #b61318; background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115)); background: -moz-linear-gradient(top,  #c9151b,  #a11115); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115'); color:#fff;}
+.red:active {color: #de898c;background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));background: -moz-linear-gradient(top,  #aa1317,  #ed1c24);filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');}
+.cor_bs,.cor_bs:hover{color:#ffffff;}
+.keBody{background:url(../img/bodyBg.jpg) repeat #333;}
+.keTitle{height:100px; line-height:100px; font-size:30px; font-family:'微软雅黑'; color:#FFF; text-align:center; background:url(../img/bodyBg3.jpg) repeat-x bottom left; font-weight:normal}
+.kePublic{background:#FFF; padding:50px;}
+.keBottom{color:#FFF; padding-top:25px; line-height:28px; text-align:center; font-family:'微软雅黑'; background:url(../img/bodyBg2.jpg) repeat-x top left; padding-bottom:25px}
+.keTxtP{font-size:16px; color:#ffffff;}
+.keUrl{color:#FFF; font-size:30px;}
+.keUrl:hover{ text-decoration: underline; color: #FFF; }
+.mKeBanner,.mKeBanner div{text-align:center;}
+/*科e互联特效基本框架CSS结束，应用特效时，以上样式可删除*/
+.sucaijiayuan{width:500px;margin:0px auto;font:normal 14px/32px 'microsoft yahei';height:32px;}
+.sucaijiayuan p{margin-bottom:50px;}
+.sucaijiayuan p span{float:left;padding-right:10px;}
+/*通用组开始 */
+.mod-dropdownlist {
+    display: inline-block;
+}
+.mod-dropdownlist .dropdown-select {
+    background: transparent url(../img/bg_dropdown.png) left top repeat-x;
+    border: 1px solid #d9d9d9;
+    color: #666;
+    cursor: default;
+    display: inline-block;
+    *display: inline;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    *zoom: 1;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    font-size: 14px;
+}
+.mod-dropdownlist .dropdown-select:visited,
+.mod-dropdownlist .dropdown-select:hover,
+.mod-dropdownlist .dropdown-select:active {
+    border: 1px solid #c7c7c7;
+    color: #666;
+    background: transparent;
+}
+.mod-dropdownlist .dropdown-select .dropdown-input {
+    border-right: 1px solid #ededed;
+    padding: 0 10px;
+    zoom: 1;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 30px;
+    float: left;
+    height: 30px;
+}
+.mod-dropdownlist .dropdown-select .dropdown-icon {
+    background: transparent url(../img/icon_dropdown.gif) center center no-repeat;
+    border-left: 1px solid #fff;
+    width: 40px;
+    padding: 0 0;
+    zoom: 1;
+    font-size: 14px;
+    line-height: 30px;
+    float: left;
+    height: 30px;
+}
+.mod-dropdownlist .dropdown-select:hover .dropdown-icon {
+    background: transparent url(../img/icon_dropdown_hover.gif) center center no-repeat;
+}
+.mod-dropdownlist .dropdown-list {
+    background: #fff;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    display: block;
+    overflow: hidden;
+    padding:0;
+}
+.mod-dropdownlist .dropdown-options {
+    background: #fff;
+    display: block;
+    overflow: hidden;
+    overflow-y: auto;
+    padding:0;
+    margin: 0;
+}
+.mod-dropdownlist .dropdown-options li {
+    margin: 0;
+    padding: 0;
+}
+.mod-dropdownlist .dropdown-options li a {
+    color: #666;
+    cursor: default;
+    display: block;
+    padding: 0 10px;
+    white-space: nowrap;
+    width: 120%;
+    font-size: 14px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.mod-dropdownlist .dropdown-options li a:hover {
+    background-color: #eee;
+    color: #666;
+}
+.mod-dropdownlist .dropdown-options li.dropdown-options-focus a,
+.mod-dropdownlist .dropdown-options li.dropdown-options-focus a:hover{
+    background-color: #E64E3F;
+    color:#fff;
+}
+.mod-dropdownlist .dropdown-list .dropdown-custombox {
+    border-top: 1px solid #ccc;
+}
+/*
+本代码由素材家园收集并编辑整理;
+尊重他人劳动成果;
+转载请保留素材家园链接 - www.sucaijiayuan.com
+*/

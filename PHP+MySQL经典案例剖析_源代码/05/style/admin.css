@@ -1,0 +1,178 @@
+/* CSS Document */
+BODY {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none;
+	font-family:"ËÎÌו";
+	font-size:12px;
+	margin:0;
+}
+TD {
+	font: 13px "ËÎÌו";
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LABEL INPUT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H2 {
+	MARGIN: 5px 10px; font-size:14px;; COLOR: #333; BORDER-BOTTOM: #e5f3ff 0.5em solid
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#footer A {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+INPUT:focus {
+	BORDER-RIGHT: #686868 1px solid; BORDER-TOP: #686868 1px solid; BACKGROUND: #fff; BORDER-LEFT: #686868 1px solid; BORDER-BOTTOM: #686868 1px solid
+}
+TEXTAREA:focus {
+	BORDER-RIGHT: #686868 1px solid; BORDER-TOP: #686868 1px solid; BACKGROUND: #fff; BORDER-LEFT: #686868 1px solid; BORDER-BOTTOM: #686868 1px solid
+}
+LABEL:focus {
+	BORDER-RIGHT: #686868 1px solid; BORDER-TOP: #686868 1px solid; BACKGROUND: #fff; BORDER-LEFT: #686868 1px solid; BORDER-BOTTOM: #686868 1px solid
+}
+LABEL {
+	CURSOR: pointer
+}
+LI {
+	MARGIN-BOTTOM: 6px
+}
+DD {
+	MARGIN-BOTTOM: 6px
+}
+P {
+	LINE-HEIGHT: 140%
+}
+LI {
+	LINE-HEIGHT: 140%
+}
+DL {
+	LINE-HEIGHT: 140%
+}
+DD {
+	LINE-HEIGHT: 140%
+}
+DT {
+	LINE-HEIGHT: 140%
+}
+TEXTAREA {
+	BORDER-RIGHT: #b2b2b2 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #b2b2b2 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f4f4f4; PADDING-BOTTOM: 3px; MARGIN: 1px; FONT: 13px Verdana, Arial, Helvetica, sans-serif; BORDER-LEFT: #b2b2b2 1px solid; COLOR: #000; PADDING-TOP: 3px; BORDER-BOTTOM: #b2b2b2 1px solid
+}
+INPUT {
+	BORDER-RIGHT: #b2b2b2 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #b2b2b2 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f4f4f4; PADDING-BOTTOM: 3px; MARGIN: 1px; FONT: 13px Verdana, Arial, Helvetica, sans-serif; BORDER-LEFT: #b2b2b2 1px solid; COLOR: #000; PADDING-TOP: 3px; BORDER-BOTTOM: #b2b2b2 1px solid
+}
+SELECT {
+	BORDER-RIGHT: #b2b2b2 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #b2b2b2 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f4f4f4; PADDING-BOTTOM: 3px; MARGIN: 1px; FONT: 13px Verdana, Arial, Helvetica, sans-serif; BORDER-LEFT: #b2b2b2 1px solid; COLOR: #000; PADDING-TOP: 3px; BORDER-BOTTOM: #b2b2b2 1px solid
+}
+.checkbox {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.clear {
+	CLEAR: both; HEIGHT: 2px
+}
+.hidden {
+	DISPLAY: none
+}
+TABLE .vers {
+	TEXT-ALIGN: center
+}
+TEXTAREA.all-options {
+	WIDTH: 250px
+}
+INPUT.all-options {
+	WIDTH: 250px
+}
+INPUT.disabled {
+	BACKGROUND: #ccc
+}
+TEXTAREA.disabled {
+	BACKGROUND: #ccc
+}
+#adminmenu {
+	PADDING-RIGHT: 0.2em; BORDER-TOP: #448abd 3px solid; PADDING-LEFT: 2em; BACKGROUND: #83b4d8; PADDING-BOTTOM: 0.3em; MARGIN: 0px; PADDING-TOP: 0.2em
+}
+#adminmenu .current {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#submenu .current {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#adminmenu A {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 14px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #000; PADDING-TOP: 3px; BORDER-BOTTOM-STYLE: none
+}
+#adminmenu A:hover {
+	BACKGROUND: #ddeaf4; COLOR: #333
+}
+#adminmenu A.current {
+	BACKGROUND: #ddeaf4; COLOR: #333
+}
+#adminmenu LI {
+	DISPLAY: inline; LINE-HEIGHT: 200%; LIST-STYLE-TYPE: none; TEXT-ALIGN: center
+}
+#submenu LI {
+	DISPLAY: inline; LINE-HEIGHT: 200%; LIST-STYLE-TYPE: none; TEXT-ALIGN: center
+}
+#adminmenu A.current {
+	BORDER-RIGHT: #4f96c8 2px solid; BORDER-TOP: #96c0de 1px solid; BACKGROUND: #0d324f; PADDING-BOTTOM: 8px; COLOR: #fff
+}
+#submenu {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 3em; BACKGROUND: #0d324f; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 3px; BORDER-BOTTOM-STYLE: none
+}
+#minisub {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 3em; BACKGROUND: #0d324f; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 3px; BORDER-BOTTOM-STYLE: none
+}
+#minisub {
+	HEIGHT: 6px
+}
+#submenu .current {
+	BORDER-RIGHT: #045290 2px solid; BORDER-TOP: #045290 1px solid; BACKGROUND: #f9fcfe; COLOR: #000
+}
+#submenu A {
+	PADDING-RIGHT: 0.4em; PADDING-LEFT: 0.4em; FONT-SIZE: 12px; PADDING-BOTTOM: 0.4em; COLOR: #fff; BORDER-TOP-STYLE: none; PADDING-TOP: 0.3em; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#submenu A:hover {
+	BACKGROUND: #ddeaf4; COLOR: #393939
+}
+#submenu LI {
+	LINE-HEIGHT: 180%; HEIGHT: 25px
+}
+#footer {
+	CLEAR: both; MARGIN: auto; WIDTH: 500px; HEIGHT: 100px; TEXT-ALIGN: center
+}
+#footer .docs {
+	LINE-HEIGHT: 160%; PADDING-TOP: 19px
+}
+#footer .docs A {
+	TEXT-DECORATION: underline
+}
+#footer .logo {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_info {
+	FONT-SIZE: 0.9em; RIGHT: 1em; COLOR: #fff; POSITION: absolute; TOP: 0px
+}
+#user_info A {
+	COLOR: #fff
+}
+#wphead {
+	PADDING-RIGHT: 19em; PADDING-LEFT: 2em; BACKGROUND: #14568a; PADDING-BOTTOM: 0.8em; COLOR: #c3def1; PADDING-TOP: 0.8em
+}
+#wphead A {
+	COLOR: #fff
+}
+#wphead H1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 2.5em; MARGIN: 0px; FONT-FAMILY: Georgia, "Times New Roman", Times, serif; LETTER-SPACING: -0.05em
+}
+#wphead H1 SPAN {
+	FONT-SIZE: 0.4em; LETTER-SPACING: 0px
+}
+FIELDSET LEGEND A {
+	BORDER-BOTTOM-STYLE: none
+}
+* HTML #zeitgeist H2 {
+	PADDING-TOP: 10px
+}
+.wrap {
+	CLEAR: both; BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 1em; BACKGROUND: #fff; PADDING-BOTTOM: 1em; MARGIN: 15px 5%; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 1em; BORDER-BOTTOM: #ccc 1px solid
+}

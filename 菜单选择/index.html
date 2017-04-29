@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>JS网页特效-全站通用选项卡（标签）切换特效</title>
+		<meta name="keywords" content="Javascript网页特效,JS焦点图,JS广告代码,JS代码,JS图文特效" />
+		<meta name="description" content="科e互联-北京网站建设、网站制作、网站改版、网站优化向您提供原创js特效，欢迎加入QQ群一起学习：47445401" />
+		<style type="text/css">
+			/* 全局样式 */
+			
+			body,
+			ul,
+			dl,
+			dd,
+			dt,
+			ol,
+			li,
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			textarea,
+			form,
+			select,
+			fieldset,
+			table,
+			td,
+			div,
+			input {
+				margin: 0;
+				padding: 0;
+				-webkit-text-size-adjust: none
+			}
+			
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-size: 12px;
+				font-weight: normal
+			}
+			
+			body>div,
+			form>div {
+				margin: 0 auto
+			}
+			
+			div {
+				text-align: left
+			}
+			
+			a img {
+				border: 0
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			select,
+			input,
+			textarea {
+				font: 12px "宋体";
+				outline: none
+			}
+			
+			body {
+				color: #333;
+				text-align: center;
+				font: 12px "宋体"
+			}
+			
+			ul,
+			ol,
+			li {
+				list-style-type: none;
+				vertical-align: 0
+			}
+			
+			a {
+				outline-style: none;
+				color: #333;
+				text-decoration: none
+			}
+			
+			a:hover {
+				text-decoration: underline
+			}
+			
+			a,
+			area {
+				blr: expression(this.onFocus=this.blur())
+			}
+			
+	
+	
+			.clear {
+				clear: both
+			}
+			
+			.hidden {
+				display: none
+			}
+			
+		
+			
+			
+		
+			.bx_chgBtn {
+				background: url(images/bx_line.jpg) repeat-x scroll left bottom transparent;
+				height: 33px;
+				overflow: hidden;
+				margin-top: 15px;
+			}
+			
+			.bx_chgBtn ul li {
+				border: 1px solid #DADADA;
+				color: #D30D02;
+				cursor: pointer;
+				float: left;
+				font-size: 14px;
+				font-weight: bold;
+				height: 32px;
+				line-height: 32px;
+				margin: 1px 1px 0;
+				text-align: center;
+				width: 83px;
+			}
+			
+			.bx_chgBtn ul .mCon_Cutbtn {
+				background-color: #333333;
+				color: #ffffff;
+				height: 33px;
+				margin: 0;
+				padding-top: 1px;
+			}
+						
+		
+		
+		
+			
+			.mPubcon {
+				width: 500px;
+				margin: 0 auto;
+			}
+		</style>
+		<script src="js/jquery.js" language="javascript" type="text/javascript"></script>
+		<script language="javascript">
+			jQuery(function() {
+				jQuery(".mChangeTag .mCon_btn").hover(function() {
+					jQuery(this).parent().find(".mCon_btn").removeClass("mCon_Cutbtn");
+					jQuery(this).addClass("mCon_Cutbtn");
+					var cutNum = jQuery(this).parent().find(".mCon_btn").index(this);
+					jQuery(this).parents(".mChangeTag").find(".mCon_conTxt").hide();
+					jQuery(this).parents(".mChangeTag").find(".mCon_conTxt").eq(cutNum).show();
+				})
+			})
+		</script>
+		<!-- 通用标签切换 End -->
+		</script>
+	</head>
+
+	<!--效果 开始-->
+	<div class="mCon">
+		<div class="mPubcon">
+			<div class="mChangeTag">
+				<div class="bx_chgBtn">
+					<ul>
+						<li class="mCon_btn mCon_Cutbtn">焦点图</li>
+						<li class="mCon_btn">网站建设</li>
+						<li class="mCon_btn">HTML学习</li>
+						<li class="mCon_btn">文字特效</li>
+					</ul>
+				</div>
+				<div class="bx_chgCon">
+					<div class="mCon_conTxt">
+						<div class="bx3_u2">
+							<img src="images/2a.jpg" width="100%" height="70%" />
+						</div>
+					</div>
+					<div class="mCon_conTxt hidden">
+
+						<div class="bx3_u2">
+							<img src="images/3a.jpg" width="100%" height="70%" />
+						</div>
+					</div>
+
+					<div class="mCon_conTxt hidden">
+
+						<div class="bx3_u2">
+							<img src="images/2a.jpg" width="100%" height="70%" />
+						</div>
+					</div>
+					<div class="mCon_conTxt hidden">
+						<div class="bx3_u2">
+							<img src="images/3a.jpg" width="100%" height="70%" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!--End-->
+	</div>
+	</body>
+
+</html>
